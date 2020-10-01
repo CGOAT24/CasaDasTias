@@ -34,5 +34,10 @@ namespace CasaDasTias {
             registres.Dock = DockStyle.Fill;
             registres.BringToFront();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e) {
+
+        }
+
     }
 }

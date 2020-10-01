@@ -35,3 +35,17 @@ C:\Users\chad-\Source\Repos\Daveboiii24\CasaDasTias\CasaDasTias\CasaDasTias\bin\
 C:\Users\chad-\Source\Repos\Daveboiii24\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\System.Memory.xml
 C:\Users\chad-\Source\Repos\Daveboiii24\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\chad-\Source\Repos\Daveboiii24\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.csprojAssemblyReference.cache
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.Form1.resources
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.Properties.Resources.resources
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.csproj.GenerateResource.cache
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.csproj.CoreCompileInputs.cache
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.exe
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.pdb
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.UCInventaire.resources
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.UCRegistres.resources
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\CasaDasTias.exe.config
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\CasaDasTias.exe
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\CasaDasTias.pdb
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\bin\Debug\MaterialSkin.dll
+C:\Users\chad-\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.csproj.CopyComplete

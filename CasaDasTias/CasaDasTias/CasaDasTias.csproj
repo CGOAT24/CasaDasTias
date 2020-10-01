@@ -57,6 +57,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCCommandes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCommandes.Designer.cs">
+      <DependentUpon>UCCommandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmployes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmployes.Designer.cs">
+      <DependentUpon>UCEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInventaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInventaire.Designer.cs">
+      <DependentUpon>UCInventaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRegistres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRegistres.Designer.cs">
+      <DependentUpon>UCRegistres.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCInventaire.resx">
+      <DependentUpon>UCInventaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRegistres.resx">
+      <DependentUpon>UCRegistres.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
