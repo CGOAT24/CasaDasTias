@@ -42,7 +42,9 @@ namespace CasaDasTias {
                 con.Close();
             }
             catch (Exception) {
-
+                if (con.State == ConnectionState.Open) {
+                    con.Close();
+                }
             }
             return tableClients;
         }
