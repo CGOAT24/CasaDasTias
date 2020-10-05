@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace CasaDasTias {
     class ConnexionDB {
-        MySqlConnection con = new MySqlConnection();
+        MySqlConnection con;
         static ConnexionDB instance = null;
         const String TABLE = "";
 
