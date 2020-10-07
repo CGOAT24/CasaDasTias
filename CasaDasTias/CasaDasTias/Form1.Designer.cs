@@ -38,14 +38,13 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(158, 426);
             this.pnlMenu.TabIndex = 0;
-            this.pnlMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // materialFlatButton2
             // 
             this.materialFlatButton2.AutoSize = true;
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(4, 54);
+            this.materialFlatButton2.Location = new System.Drawing.Point(11, 54);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -86,7 +85,8 @@
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Casa Das Tias";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             this.ResumeLayout(false);

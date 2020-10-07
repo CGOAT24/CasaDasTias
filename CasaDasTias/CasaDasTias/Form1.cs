@@ -16,10 +16,18 @@ namespace CasaDasTias {
         UCRegistres registres;
         UCCommandes commandes;
         UCEmployes employes;
+        public static bool connected = false;
         public Form1() {
             InitializeComponent();
             inventaire = new UCInventaire();
             registres = new UCRegistres();
+
+                //section login
+                Login loginForm = new Login();
+                loginForm.ShowDialog();
+                if (!connected) {
+                    System.Environment.Exit(0);
+                }
         }
 
         private void btnInventaire_Click(object sender, EventArgs e) {
@@ -39,5 +47,8 @@ namespace CasaDasTias {
 
         }
 
+        private void Form1_Load(object sender, EventArgs e) {
+
+        }
     }
 }

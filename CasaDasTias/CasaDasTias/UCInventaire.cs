@@ -16,8 +16,13 @@ namespace CasaDasTias {
             InitializeComponent();
         }
 
-        private void UCInventaire_Load(object sender, EventArgs e) {
+        private void btnRefresh_Click(object sender, EventArgs e) {
+           dataGridView1.DataSource = ConnexionDB.GetInstance().Select($"SELECT * FROM inventaire", "inventaire");
+        }
 
+        private void btnAjouter_Click(object sender, EventArgs e) {
+            Ajouter formAjouter = new Ajouter();
+            formAjouter.ShowDialog();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -11,10 +12,9 @@ namespace CasaDasTias {
     class ConnexionDB {
         MySqlConnection con;
         static ConnexionDB instance = null;
-        const String TABLE = "";
 
         public ConnexionDB() {
-            con = new MySqlConnection("Server=69.90.160.150;Database=;Uid=Louka782;Pwd=9nv0pftz15;Port=3306");
+            con = new MySqlConnection("Server=69.90.160.150;Database=louka782_CasadasTias;Uid=louka782;Pwd=9nv0pftz15;Port=3306"); //à modifier
         }
 
         public static ConnexionDB GetInstance() {
@@ -25,18 +25,18 @@ namespace CasaDasTias {
             return instance;
         }
 
-        public DataTable Afficher() {
+        public DataTable Select(String query, string table) {
 
-            DataTable tableClients = null;
+            DataTable table_query = null;
             try {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = $"SELECT * FROM '{TABLE}'";
+                commande.CommandText = query;
                 con.Open();
                 MySqlDataReader r = commande.ExecuteReader();
 
-                tableClients = new DataTable(TABLE);
-                tableClients.Load(r);
+                table_query = new DataTable(table);
+                table_query.Load(r);
 
                 r.Close();
                 con.Close();
@@ -46,16 +46,14 @@ namespace CasaDasTias {
                     con.Close();
                 }
             }
-            return tableClients;
+            return table_query;
         }
 
-        public bool Ajouter(/**/) { //passer les valeurs en paramètre
+        public bool Query(String query) {
             try {
-
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = $"INSERT INTO '{TABLE}' VALUES()"; //insérer les valeurs ici
-
+                commande.CommandText = query;
                 con.Open();
                 commande.ExecuteNonQuery();
                 con.Close();
@@ -71,46 +69,9 @@ namespace CasaDasTias {
             }
         }
 
-        public bool Modifier(String pk, String column, String newValue) {
-            try {
-                MySqlCommand commande = new MySqlCommand();
-                commande.Connection = con;
-                commande.CommandText = $"UPDATE '{TABLE}' SET '{column}' = '{newValue}' WHERE email = '{pk}'";
-
-                con.Open();
-                commande.ExecuteNonQuery();
-                con.Close();
-                return true;
-            }
-            catch (Exception) {
-                if (con.State == ConnectionState.Open) {
-                    con.Close();
-                }
-                return false;
-            }
-        }
-
-        public bool Supprimer(String pk, String column) {
-            try {
-                MySqlCommand commande = new MySqlCommand();
-                commande.Connection = con;
-                commande.CommandText = $"DELETE FROM '{TABLE}' WHERE '{column}' = '{pk}'";
-
-                con.Open();
-                commande.ExecuteNonQuery();
-                con.Close();
-
-                return true;
-            }
-            catch (Exception) {
-
-                if (con.State == ConnectionState.Open) {
-                    con.Close();
-                }
-
-                return false;
-            }
-
+        public DataTable Check_PK(int pk, string column) {
+            DataTable output = ConnexionDB.GetInstance().Select($"SELECT COUNT(*) FROM inventaire WHERE '{column}' = '{pk}'", "inventaire");
+            return output;
         }
     }
 }
