@@ -9,26 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CasaDasTias {
-    public partial class Ajouter : Form {
-        public Ajouter() {
+    public partial class ModifierInventaire : Form {
+        public ModifierInventaire() {
             InitializeComponent();
+            dataGridView1.DataSource = ConnexionDB.GetInstance().Select("SELECT * FROM inventaire", "inventaire");
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e) {
+        private void button1_Click(object sender, EventArgs e) {
             String nomProduit, date;
             int numLot, quantite;
-
-            if (tbNumLot.Text.Trim().Equals("")) {
-                MessageBox.Show("Le numéro ne peut pas être vide. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if(!int.TryParse(tbNumLot.Text, out int _)) {
-                MessageBox.Show("Le numéro de lot ne doit contenir que des chiffres. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else {
-                numLot = Convert.ToInt32(tbNumLot.Text);
-            }
 
             if (tbNom.Text.Trim().Equals("")) {
                 MessageBox.Show("Le nom du produit ne peut pas être vide. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -46,7 +35,7 @@ namespace CasaDasTias {
                 MessageBox.Show("La quantité ne doit contenir que des chiffres. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if(tbQuantite.Text.Trim().Equals("")) {
+            else if (tbQuantite.Text.Trim().Equals("")) {
                 MessageBox.Show("La quantité de peut pas être vide. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -54,22 +43,25 @@ namespace CasaDasTias {
                 quantite = Convert.ToInt32(tbQuantite.Text);
             }
 
-            if(dtpDate.Value == null) {
+            if (dtpDateAjout.Value == null) {
                 MessageBox.Show("La date ne peut pas être vide. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else {
-                date = dtpDate.Value.ToString("yyyy-MM-dd");
+                date = dtpDateAjout.Value.ToString("yyyy-MM-dd");
             }
-            
-            if (ConnexionDB.GetInstance().Query($"INSERT INTO inventaire VALUES('{numLot}', '{nomProduit}', '{quantite}', '{date}')")) {
-                MessageBox.Show("L'ajout a été effectué avec succès!", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else {
-                MessageBox.Show("Une erreur s'est produite. Veuillez réessayer!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        }
 
-            this.Close();
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            string selectedNom = dataGridView1.CurrentRow.Cells[1].ToString();
+            int selectedQuantite = Convert.ToInt32(dataGridView1.CurrentRow.Cells[2]);
+            string selectedDate = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            tbNom.Text = selectedNom;
+            tbQuantite.Text = selectedQuantite.ToString();
+            dtpDateAjout.Value = selectedDate;
+
+          
         }
     }
 }

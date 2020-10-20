@@ -32,8 +32,6 @@
             this.tbNom = new System.Windows.Forms.TextBox();
             this.tbQuantite = new System.Windows.Forms.TextBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAjouter
@@ -110,20 +108,11 @@
             this.dtpDate.Size = new System.Drawing.Size(100, 20);
             this.dtpDate.TabIndex = 8;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(308, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 9;
-            // 
             // Ajouter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.tbQuantite);
             this.Controls.Add(this.tbNom);
@@ -135,7 +124,6 @@
             this.Controls.Add(this.btnAjouter);
             this.Name = "Ajouter";
             this.Text = "Ajouter";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +140,5 @@
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.TextBox tbQuantite;
         private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

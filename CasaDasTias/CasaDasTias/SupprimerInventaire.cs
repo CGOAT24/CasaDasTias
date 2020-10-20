@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CasaDasTias {
-    public partial class UCCommandes : UserControl {
-        public UCCommandes() {
+    public partial class SupprimerInventaire : Form {
+        public SupprimerInventaire() {
             InitializeComponent();
-            dataGridView1.DataSource = ConnexionDB.GetInstance().Select("SELECT * FROM commande", "commande");
+            
+        }
+
+        private void SupprimerInventaire_Load(object sender, EventArgs e) {
+
         }
     }
 }

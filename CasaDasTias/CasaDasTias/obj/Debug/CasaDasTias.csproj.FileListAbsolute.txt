@@ -87,3 +87,7 @@ C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\Cas
 C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.pdb
 C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.Login.resources
 C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.Ajouter.resources
+C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.Commande.resources
+C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.UCCommandes.resources
+C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.SupprimerInventaire.resources
+C:\Users\Chad\Documents\GitHub\CasaDasTias\CasaDasTias\CasaDasTias\obj\Debug\CasaDasTias.ModifierInventaire.resources

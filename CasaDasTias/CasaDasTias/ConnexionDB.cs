@@ -69,9 +69,17 @@ namespace CasaDasTias {
             }
         }
 
-        public DataTable Check_PK(int pk, string column) {
+        public bool Check_PK(int pk, string column) {
             DataTable output = ConnexionDB.GetInstance().Select($"SELECT COUNT(*) FROM inventaire WHERE '{column}' = '{pk}'", "inventaire");
-            return output;
+            string num = output.Rows[0][0].ToString();
+            int iNum = Convert.ToInt32(num);
+            if(iNum > 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+           
         }
     }
 }

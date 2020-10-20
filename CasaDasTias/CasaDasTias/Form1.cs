@@ -15,12 +15,13 @@ namespace CasaDasTias {
         UCInventaire inventaire;
         UCRegistres registres;
         UCCommandes commandes;
-        UCEmployes employes;
+
         public static bool connected = false;
         public Form1() {
             InitializeComponent();
             inventaire = new UCInventaire();
             registres = new UCRegistres();
+            commandes = new UCCommandes(); 
 
                 //section login
                 Login loginForm = new Login();
@@ -36,19 +37,16 @@ namespace CasaDasTias {
             inventaire.BringToFront();
         }
 
-
         private void btnRegistres_Click(object sender, EventArgs e) {
             pnlMain.Controls.Add(registres);
             registres.Dock = DockStyle.Fill;
             registres.BringToFront();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e) {
-
+        private void btnCommandes_Click(object sender, EventArgs e) {
+            pnlMain.Controls.Add(commandes);
+            commandes.Dock = DockStyle.Fill;
+            commandes.BringToFront();
         }
     }
 }
