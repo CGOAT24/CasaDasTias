@@ -50,18 +50,27 @@ namespace CasaDasTias {
             else {
                 date = dtpDateAjout.Value.ToString("yyyy-MM-dd");
             }
+
+            numLot = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            if (ConnexionDB.GetInstance().Query($"UPDATE inventaire SET nom = '{nomProduit}', qte = '{quantite}', dateAjout = '{date}' WHERE numLot = '{numLot}'")) {
+                MessageBox.Show("La modification a été effectuée avec succès!", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else {
+                MessageBox.Show("Une erreur s'est produite lors de la modification. Veuillez réessayer", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            refresh();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            string selectedNom = dataGridView1.CurrentRow.Cells[1].ToString();
-            int selectedQuantite = Convert.ToInt32(dataGridView1.CurrentRow.Cells[2]);
-            string selectedDate = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            tbNom.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            tbQuantite.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            dtpDateAjout.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+        }
 
-            tbNom.Text = selectedNom;
-            tbQuantite.Text = selectedQuantite.ToString();
-            dtpDateAjout.Value = selectedDate;
-
-          
+        public void refresh() {
+            dataGridView1.DataSource = ConnexionDB.GetInstance().Select("SELECT * FROM inventaire", "inventaire");
         }
     }
 }

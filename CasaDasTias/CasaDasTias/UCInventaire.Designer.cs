@@ -42,7 +42,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(607, 324);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnRefresh
             // 
@@ -96,6 +95,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "UCInventaire";
             this.Size = new System.Drawing.Size(866, 415);
+            this.Load += new System.EventHandler(this.UCInventaire_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

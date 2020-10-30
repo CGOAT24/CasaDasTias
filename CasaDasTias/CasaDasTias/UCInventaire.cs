@@ -36,8 +36,12 @@ namespace CasaDasTias {
             formSupprimer.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void UCInventaire_Load(object sender, EventArgs e) {
+            refresh();
+        }
 
+        public void refresh() {
+            dataGridView1.DataSource = ConnexionDB.GetInstance().Select("SELECT * FROM inventaire", "inventaire");
         }
     }
 }
