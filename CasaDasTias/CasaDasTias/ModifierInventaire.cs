@@ -63,7 +63,7 @@ namespace CasaDasTias {
             refresh();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
             tbNom.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             tbQuantite.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             dtpDateAjout.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[3].Value.ToString());
@@ -71,6 +71,7 @@ namespace CasaDasTias {
 
         public void refresh() {
             dataGridView1.DataSource = ConnexionDB.GetInstance().Select("SELECT * FROM inventaire", "inventaire");
+            dataGridView1.DataSource = Encoding.UTF8.GetBytes(dataGridView1.DataSource.ToString());
         }
     }
 }

@@ -25,10 +25,12 @@ namespace CasaDasTias {
             return instance;
         }
 
-        public DataTable Select(String query, string table) {
+        public DataTable Select(String query, String table) {
 
             DataTable table_query = null;
             try {
+
+                /*query = Encoding.UTF8.GetBytes(query).ToString();*/
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
                 commande.CommandText = query;

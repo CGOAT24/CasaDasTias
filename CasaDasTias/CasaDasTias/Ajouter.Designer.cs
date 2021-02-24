@@ -36,7 +36,7 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(53, 99);
+            this.btnAjouter.Location = new System.Drawing.Point(91, 214);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(100, 50);
             this.btnAjouter.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 41);
+            this.label1.Location = new System.Drawing.Point(38, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 41);
+            this.label2.Location = new System.Drawing.Point(12, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 2;
@@ -65,7 +65,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 41);
+            this.label3.Location = new System.Drawing.Point(6, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 3;
@@ -74,7 +74,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(368, 41);
+            this.label4.Location = new System.Drawing.Point(10, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 4;
@@ -82,28 +82,28 @@
             // 
             // tbNumLot
             // 
-            this.tbNumLot.Location = new System.Drawing.Point(53, 57);
+            this.tbNumLot.Location = new System.Drawing.Point(91, 41);
             this.tbNumLot.Name = "tbNumLot";
             this.tbNumLot.Size = new System.Drawing.Size(100, 20);
             this.tbNumLot.TabIndex = 5;
             // 
             // tbNom
             // 
-            this.tbNom.Location = new System.Drawing.Point(159, 57);
+            this.tbNom.Location = new System.Drawing.Point(91, 86);
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(100, 20);
             this.tbNom.TabIndex = 6;
             // 
             // tbQuantite
             // 
-            this.tbQuantite.Location = new System.Drawing.Point(265, 57);
+            this.tbQuantite.Location = new System.Drawing.Point(91, 127);
             this.tbQuantite.Name = "tbQuantite";
             this.tbQuantite.Size = new System.Drawing.Size(100, 20);
             this.tbQuantite.TabIndex = 7;
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(371, 57);
+            this.dtpDate.Location = new System.Drawing.Point(91, 168);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(100, 20);
             this.dtpDate.TabIndex = 8;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(229, 282);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.tbQuantite);
             this.Controls.Add(this.tbNom);

@@ -38,31 +38,35 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 12);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(327, 180);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tbNom
             // 
-            this.tbNom.Location = new System.Drawing.Point(476, 12);
+            this.tbNom.Location = new System.Drawing.Point(114, 198);
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(196, 20);
             this.tbNom.TabIndex = 2;
             // 
             // tbQuantite
             // 
-            this.tbQuantite.Location = new System.Drawing.Point(476, 38);
+            this.tbQuantite.Location = new System.Drawing.Point(114, 224);
             this.tbQuantite.Name = "tbQuantite";
             this.tbQuantite.Size = new System.Drawing.Size(196, 20);
             this.tbQuantite.TabIndex = 3;
             // 
             // dtpDateAjout
             // 
-            this.dtpDateAjout.Location = new System.Drawing.Point(476, 64);
+            this.dtpDateAjout.Location = new System.Drawing.Point(114, 250);
             this.dtpDateAjout.Name = "dtpDateAjout";
             this.dtpDateAjout.Size = new System.Drawing.Size(196, 20);
             this.dtpDateAjout.TabIndex = 4;
@@ -70,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(391, 15);
+            this.label2.Location = new System.Drawing.Point(29, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 6;
@@ -79,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(423, 41);
+            this.label3.Location = new System.Drawing.Point(61, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 7;
@@ -88,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(406, 70);
+            this.label4.Location = new System.Drawing.Point(44, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 8;
@@ -98,7 +102,7 @@
             // 
             this.btnModifier.BackColor = System.Drawing.Color.Lavender;
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifier.Location = new System.Drawing.Point(476, 90);
+            this.btnModifier.Location = new System.Drawing.Point(114, 276);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(196, 35);
             this.btnModifier.TabIndex = 9;
@@ -110,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(327, 329);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

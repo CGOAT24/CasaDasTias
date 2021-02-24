@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using System.Runtime.CompilerServices;
 
 namespace CasaDasTias {
     public partial class UCInventaire : UserControl {
         public UCInventaire() {
             InitializeComponent();
-            dataGridView1.DataSource = ConnexionDB.GetInstance().Select($"SELECT DISTINCT nom, SUM(qte) as Quantité FROM inventaire GROUP BY nom", "inventaire");
+            refresh();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e) {
-           dataGridView1.DataSource = ConnexionDB.GetInstance().Select($"SELECT DISTINCT nom, SUM(qte) as Quantité FROM inventaire GROUP BY nom", "inventaire");
+            refresh();
         }
 
         private void btnAjouter_Click(object sender, EventArgs e) {
@@ -41,7 +42,11 @@ namespace CasaDasTias {
         }
 
         public void refresh() {
-            dataGridView1.DataSource = ConnexionDB.GetInstance().Select("SELECT * FROM inventaire", "inventaire");
+            string query = "SELECT numLot as 'Numéro de lot', nom as 'Produit', qte as 'Quantité', dateAjout as 'Date dajout' FROM inventaire";
+
+            dataGridView1.DataSource = ConnexionDB.GetInstance().Select(query, "inventaire");
+    
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }
